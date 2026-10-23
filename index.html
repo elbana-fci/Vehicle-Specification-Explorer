@@ -801,11 +801,13 @@ Selection is distinct from keyboard focus. Initial guidance is gentle.
 
     .vs .vs-row button {
       border-color: #b5bdc2;
+      transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease, background-color 0.15s ease, border-color 0.15s ease;
     }
 
     .vs .vs-row button:hover {
       border-color: #8fd4ff;
       background: #e1f4ff;
+      box-shadow: 0 0 0 3px rgba(125, 199, 240, 0.45), 0 6px 14px rgba(25, 47, 124, 0.14);
     }
 
     .vs .vs-row.is-selected button {
@@ -906,9 +908,11 @@ Selection is distinct from keyboard focus. Initial guidance is gentle.
                   <h2 id="task-title" tabindex="-1">Find the engine type</h2>
                 </div>
               </div>
-              <p class="vs-task-intro">Explore the vehicle specifications and select the value that answers:
-                <strong>What is the engine type?</strong>
-              </p>
+              <div class="vs-task-intro">
+                <h3>What is the engine type?</h3>
+                <p>Explore the vehicle specifications and select the value that answers the question.</p>
+              </div>
+
               <div class="vs-actions">
                 <button type="button" id="hint">Need a hint?</button>
                 <button type="button" id="restart">Start again</button>
@@ -916,7 +920,8 @@ Selection is distinct from keyboard focus. Initial guidance is gentle.
               <p id="hint-text" hidden></p>
               <!-- Empty live region exists before the delayed mentor text arrives. -->
               <div class="vs-mentor" id="mentor-box" hidden>
-                <img src="mentor.png" width="88" height="88" alt="Course mentor wearing a hard hat and safety vest">
+                <img src="_shared/img/mentor.png" width="88" height="88"
+                  alt="Course mentor wearing a hard hat and safety vest">
                 <div>
                   <p class="vs-mentor-label">MENTOR</p>
                   <p id="feedback" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></p>
@@ -931,7 +936,7 @@ Selection is distinct from keyboard focus. Initial guidance is gentle.
                   <p>Start with the essentials. Open a category when you need a closer look.</p><a class="vs-link"
                     href="#specifications">Explore specifications <span aria-hidden="true">↓</span></a>
                 </div>
-                <figure><img src="truck-image.jpg" width="340" height="auto"
+                <figure><img src="_shared/img/truck-image.jpg" width="340" height="auto"
                     alt="White Ford F-150 pickup truck, viewed from the front and driver’s side.">
                 </figure>
               </div>
